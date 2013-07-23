@@ -1,5 +1,7 @@
 Revision history for Perl extension CGI::Application::Plugin::DBH
 
+   - Fix missing dep on DBD::Mock (Arthur Axel 'fREW' Schmidt)
+
 4.01 Fri Jan 18 22:29:42 EST 2013
     [No Significant Changes]
     - Rework test for an existing database handle to avoid test failures

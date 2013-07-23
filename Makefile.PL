@@ -11,6 +11,7 @@ WriteMakefile
                    'Test::MockObject' => '1.20120301',
                    'CGI::Application' => 0,
                    'parent' => 0,
+                   'DBD::Mock' => 0,
                    'DBI' => 0
                  }
 )

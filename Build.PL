@@ -8,6 +8,7 @@ Module::Build->new(
         'CGI::Application' => 0,
         'DBI'              => 0,
         'Test::MockObject' => 1.20120301,
+        'DBD::Mock' => 0,
     },
     configure_requires => { 'Module::Build' => 0.40 },
     create_makefile_pl => 'traditional',
