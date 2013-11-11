@@ -28,7 +28,7 @@ sub dbh {
         # create DBH object
         if(my $config = $self->{__DBH_CONFIG}{$name} ) {
             # Use a callback
-            if (ref $config eq 'CODE') {
+            if (ref $config && ref $config eq 'CODE') {
                 $self->{__DBH}{$name} = $config->();
             }
             # use the parameters the user supplied
