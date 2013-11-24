@@ -12,8 +12,6 @@ our @EXPORT_OK = qw(
     dbh_default_name
 );
 
-our $VERSION = '4.01';
-
 sub dbh {
     my $self = shift;
     my $name = shift;
