@@ -157,8 +157,8 @@ __END__
 
 =head1 DESCRIPTION
 
-CGI::Application::Plugin::DBH adds easy access to a L<DBI|DBI> database handle to
-your L<CGI::Application|CGI::Application> modules.  Lazy loading is used to prevent a database
+CGI::Application::Plugin::DBH adds easy access to a L<DBI> database handle to
+your L<CGI::Application> modules.  Lazy loading is used to prevent a database
 connection from being made if the C<dbh> method is not called during the
 request.  In other words, the database connection is not created until it is
 actually needed. 
@@ -178,7 +178,7 @@ actually needed.
  $dbh = $self->dbh('my_other_handle');
  my $date = $dbh->selectrow_array("SELECT CURRENT_DATE");
 
-This method will return the current L<DBI|DBI> database handle.  The database handle is created on
+This method will return the current L<DBI> database handle.  The database handle is created on
 the first call to this method, and any subsequent calls will return the same handle. 
 
 =head2 dbh_config()
@@ -207,7 +207,7 @@ Used to provide your DBI connection parameters. You can either pass in an existi
 DBI database handle, or provide the usual parameters used for DBI->connect().
 
 The recommended place to call C<dbh_config> is in the C<cgiapp_init>
-stage of L<CGI::Application|CGI::Application>.  If this method is called after the database handle
+stage of L<CGI::Application>.  If this method is called after the database handle
 has already been accessed, then it will die with an error message.
 
 =head3 Automatic configuration using CGI::App instance parameters
@@ -284,9 +284,9 @@ before a call to dbh_config() without a name parameter.
 
 =head1 SEE ALSO
 
-L<Ima::DBI|Ima::DBI> is similar, but has much more complexity and features.
+L<Ima::DBI> is similar, but has much more complexity and features.
 
-L<CGI::Application|CGI::Application>, L<DBI|DBI>, L<CGI::Application::Plugin::ValidateRM|CGI::Application::Plugin::ValidateRM>, perl(1)
+L<CGI::Application>, L<DBI>, L<CGI::Application::Plugin::ValidateRM>
 
 =cut
 
