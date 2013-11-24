@@ -1,6 +1,8 @@
 package CGI::Application::Plugin::DBH;
 use parent 'Exporter';
 
+# ABSTRACT: Easy DBI access from CGI::Application
+
 use strict;
 use Carp;
 
@@ -119,10 +121,6 @@ sub dbh_default_name {
 
 1;
 __END__
-
-=head1 NAME
-
-CGI::Application::Plugin::DBH - Easy DBI access from CGI::Application
 
 =head1 SYNOPSIS
 
@@ -289,22 +287,6 @@ before a call to dbh_config() without a name parameter.
 L<Ima::DBI|Ima::DBI> is similar, but has much more complexity and features.
 
 L<CGI::Application|CGI::Application>, L<DBI|DBI>, L<CGI::Application::Plugin::ValidateRM|CGI::Application::Plugin::ValidateRM>, perl(1)
-
-=head1 AUTHOR
-
-Mark Stosberg <mark@summersault.com>
-
-Multi Handle Support added by:
-Tony Fraser <tony@sybaspace.com>
-
-Autoconfig Support added by:
-Thilo Planz <thilo@cpan.org>
-
-=head1 LICENSE
-
-Copyright (C) 2004- Mark Stosberg <mark@summersault.com>
-
-This library is free software. You can modify and or distribute it under the same terms as Perl itself.
 
 =cut
 
